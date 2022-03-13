@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CI9-W8-saj" customClass="RecordingCell" customModule="Recording" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CI9-W8-saj" id="Qe2-5L-opU">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-Ax-UYT">
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="165"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Record name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-ju-UvY">
+                                <rect key="frame" x="20" y="15" width="107" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-sk-lkA">
+                                <rect key="frame" x="20" y="42" width="322" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-Ff-Tag">
+                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljI-Iv-9Zb">
+                                        <rect key="frame" x="37.5" y="0.0" width="284.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="O7R-wi-AGa">
+                                <rect key="frame" x="18" y="72" width="326" height="23"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="R0a-En-4iL"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="CI9-W8-saj" eventType="valueChanged" id="n3H-ps-C1q"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Jb0-Gq-4ta">
+                                <rect key="frame" x="20" y="90" width="322" height="12"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-Hz-nCP">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67d-eS-BUc">
+                                        <rect key="frame" x="186" y="0.0" width="136" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="u2j-WE-1W1"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tn4-KF-PJ4">
+                                <rect key="frame" x="20" y="119" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="GAF-h3-9da"/>
+                                    <constraint firstAttribute="width" constant="33" id="Rwp-gc-79g"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="slider.horizontal.3" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EED-vk-TI0">
+                                <rect key="frame" x="116.5" y="119" width="129" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONi-Vd-x8v" userLabel="goBackButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="93u-7Q-XVD"/>
+                                            <constraint firstAttribute="height" constant="33" id="qzI-IO-8lm"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="gobackward.15" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="fifteenSecondBackwardBtnAction:" destination="CI9-W8-saj" eventType="touchUpInside" id="zR8-5n-aeX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WO-WR-ZLH">
+                                        <rect key="frame" x="48" y="0.0" width="33" height="33"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playOrPauseBtnAction:" destination="CI9-W8-saj" eventType="touchUpInside" id="nTo-Jd-UnX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-Op-uxw" userLabel="goForwardButton">
+                                        <rect key="frame" x="96" y="0.0" width="33" height="33"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="goforward.15" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="fifteenSecondForwardBtnAction:" destination="CI9-W8-saj" eventType="touchUpInside" id="FrY-bj-dA1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fP-Oc-q6S">
+                                <rect key="frame" x="309" y="119" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="Cld-16-APr"/>
+                                    <constraint firstAttribute="height" constant="33" id="uFH-R3-EKb"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ey2-sk-lkA" firstAttribute="leading" secondItem="WKz-Ax-UYT" secondAttribute="leading" constant="20" id="4g4-gJ-Z59"/>
+                            <constraint firstItem="EED-vk-TI0" firstAttribute="centerX" secondItem="WKz-Ax-UYT" secondAttribute="centerX" id="6Px-kt-25o"/>
+                            <constraint firstItem="Ey2-sk-lkA" firstAttribute="top" secondItem="Egn-ju-UvY" secondAttribute="bottom" constant="5" id="8XX-RC-dIe"/>
+                            <constraint firstItem="tn4-KF-PJ4" firstAttribute="leading" secondItem="WKz-Ax-UYT" secondAttribute="leading" constant="20" id="Dw0-fp-7bj"/>
+                            <constraint firstItem="Jb0-Gq-4ta" firstAttribute="top" secondItem="Ey2-sk-lkA" secondAttribute="bottom" constant="30" id="FNq-uH-FAq"/>
+                            <constraint firstItem="Jb0-Gq-4ta" firstAttribute="leading" secondItem="WKz-Ax-UYT" secondAttribute="leading" constant="20" id="GFR-lZ-h9z"/>
+                            <constraint firstAttribute="trailing" secondItem="O7R-wi-AGa" secondAttribute="trailing" constant="20" id="KVs-B0-d0e"/>
+                            <constraint firstAttribute="trailing" secondItem="Jb0-Gq-4ta" secondAttribute="trailing" constant="20" id="PfQ-aP-OuE"/>
+                            <constraint firstItem="O7R-wi-AGa" firstAttribute="top" secondItem="Ey2-sk-lkA" secondAttribute="bottom" constant="12" id="ah9-4o-C4R"/>
+                            <constraint firstAttribute="trailing" secondItem="9fP-Oc-q6S" secondAttribute="trailing" constant="20" id="cdc-yd-iBb"/>
+                            <constraint firstItem="O7R-wi-AGa" firstAttribute="leading" secondItem="WKz-Ax-UYT" secondAttribute="leading" constant="20" id="cgF-WN-hgG"/>
+                            <constraint firstItem="Egn-ju-UvY" firstAttribute="leading" secondItem="WKz-Ax-UYT" secondAttribute="leading" constant="20" id="dRU-Q4-bQL"/>
+                            <constraint firstItem="EED-vk-TI0" firstAttribute="top" secondItem="Jb0-Gq-4ta" secondAttribute="bottom" constant="17" id="j48-qL-RRP"/>
+                            <constraint firstItem="9fP-Oc-q6S" firstAttribute="top" secondItem="Jb0-Gq-4ta" secondAttribute="bottom" constant="17" id="oyo-CP-6jz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ey2-sk-lkA" secondAttribute="trailing" constant="20" id="syo-8r-5nC"/>
+                            <constraint firstItem="Egn-ju-UvY" firstAttribute="top" secondItem="WKz-Ax-UYT" secondAttribute="top" constant="15" id="wgc-f5-pji"/>
+                            <constraint firstItem="tn4-KF-PJ4" firstAttribute="top" secondItem="Jb0-Gq-4ta" secondAttribute="bottom" constant="17" id="wvM-k9-8kP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="WKz-Ax-UYT" secondAttribute="trailing" id="4F8-qV-lVW"/>
+                    <constraint firstItem="WKz-Ax-UYT" firstAttribute="top" secondItem="Qe2-5L-opU" secondAttribute="top" id="fzg-n9-frj"/>
+                    <constraint firstAttribute="bottom" secondItem="WKz-Ax-UYT" secondAttribute="bottom" id="wTe-yK-eV8"/>
+                    <constraint firstItem="WKz-Ax-UYT" firstAttribute="leading" secondItem="Qe2-5L-opU" secondAttribute="leading" id="zoN-eb-boa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playButton" destination="2WO-WR-ZLH" id="WpI-15-Eqr"/>
+                <outlet property="recordNameLabel" destination="Egn-ju-UvY" id="Y5j-N0-0hf"/>
+                <outlet property="recordingDurationLabel" destination="ljI-Iv-9Zb" id="Kc3-h8-0x6"/>
+                <outlet property="recordingPlayDurationLabel" destination="DRO-Hz-nCP" id="W2L-NR-1pz"/>
+                <outlet property="recordingRestTimeLabel" destination="67d-eS-BUc" id="odX-aq-C3B"/>
+                <outlet property="recordingTimeLable" destination="5Fy-Ff-Tag" id="4tj-UL-VUn"/>
+                <outlet property="slider" destination="O7R-wi-AGa" id="ZA1-HI-0VF"/>
+                <outlet property="trashButton" destination="9fP-Oc-q6S" id="43r-iT-Ofn"/>
+            </connections>
+            <point key="canvasLocation" x="1029" y="186"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gobackward.15" catalog="system" width="121" height="128"/>
+        <image name="goforward.15" catalog="system" width="121" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
